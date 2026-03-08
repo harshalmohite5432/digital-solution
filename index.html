@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HM Digital Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo">HM <span>Digital</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#jobs">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Comprehensive Digital Solutions</h1>
+            <p>Expert Web Development, Marketing, and Cinematic Media.</p>
+            <button id="bg-changer">Change Experience</button>
+        </div>
+    </section>
+
+    <section id="services" class="content-section">
+        <h2>Our Services</h2>
+        <div class="underline"></div>
+        
+        <div class="services-grid">
+            <div class="service-card" onclick="openModal('digital')">
+                <h3>Digital Solutions & Media</h3>
+                <p>Click to view details</p>
+            </div>
+            <div class="service-card" onclick="openModal('web')">
+                <h3>Web Design & Development</h3>
+                <p>Click to view details</p>
+            </div>
+            <div class="service-card" onclick="openModal('marketing')">
+                <h3>Social Media Marketing</h3>
+                <p>Click to view details</p>
+            </div>
+            <div class="service-card" onclick="openModal('performance')">
+                <h3>Technical Performance</h3>
+                <p>Click to view details</p>
+            </div>
+            <div class="service-card" onclick="openModal('support')">
+                <h3>Vendor Support</h3>
+                <p>Click to view details</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="service-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Service Title</h2>
+            <div class="underline" style="margin: 10px 0 20px;"></div>
+            <p id="modal-description">Service description goes here.</p>
+            <ul id="modal-list" class="modal-list"></ul>
+        </div>
+    </div>
+
+    <section id="jobs" class="content-section grey-bg">
+        <h2>Career Opportunities</h2>
+        <div class="underline"></div>
+        <p>Explore our database of open positions in tech, media, and digital solutions.</p>
+        
+        <div class="job-search-container">
+            <input type="text" id="job-search" placeholder="Search jobs (e.g., Java Developer, Video Editor, SQL)..." onkeyup="filterJobs()">
+        </div>
+
+        <div id="job-list-container" class="job-list">
+            </div>
+    </section>
+<form id="contact-form">
+    <input type="text" id="contact-name" placeholder="Your Name" required>
+    <input type="email" id="contact-email" placeholder="Your Email" required>
+    <textarea id="contact-msg" placeholder="Your Requirements or Job Title..." rows="4" required></textarea>
+    <button type="submit" id="submit-btn">Send Message</button>
+</form>
+
+    <script src="script.js"></script>
+</body>
+</html>
